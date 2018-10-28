@@ -1,0 +1,31 @@
+.container {
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 4% auto 0;
+}
+
+.error {
+  position: relative;
+  width: 235px;
+  background: #ffffff;
+  padding: 11px;
+  border-radius: 35px;
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px auto 0;
+  box-shadow: 0 5px 12px 5px rgba(0,0,0,.3);
+}
+.error:before {
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 30px;
+  border: 10px solid transparent;
+  border-bottom: 20px solid #ffffff;
+}
+
+body {
+  background: url(../../img/img.jpg) no-repeat;
+}
