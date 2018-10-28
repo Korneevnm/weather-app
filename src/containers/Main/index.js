@@ -13,7 +13,7 @@ export default class Main extends React.Component {
   };
 
   async componentDidMount() {
-    const ip = await request("http://ip-api.com/json");
+    const ip = await request("https://ipapi.co/json/");
     const weather = await request(`https://api.openweathermap.org/data/2.5/weather?q=${ip.city}&units=metric&APPID=e7b7e505b9f6c9fb24a4e048a62eeeab`);
     const newweather = [...this.state.weather, weather]
     this.setState({ ip, weather: newweather });
