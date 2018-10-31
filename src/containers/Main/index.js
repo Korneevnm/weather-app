@@ -26,7 +26,6 @@ export default class Main extends React.Component {
     } else {
       const newweather = [...this.state.weather, weather]
       this.setState({ weather: newweather, error: false });
-      localStorage.setItem('weather', JSON.stringify(newweather));
     }
   }
 
