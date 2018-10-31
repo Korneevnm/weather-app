@@ -9,14 +9,15 @@ export default class Main extends React.Component {
   state = {
     ip: null,
     weather: [],
-    erorr: false
+    erorr: false,
+    isLoaded: false
   };
 
   async componentDidMount() {
     const ip = await request("https://ipapi.co/json/");
     const weather = await request(`https://api.openweathermap.org/data/2.5/weather?q=${ip.city}&units=metric&APPID=e7b7e505b9f6c9fb24a4e048a62eeeab`);
     const newweather = [...this.state.weather, weather]
-    this.setState({ ip, weather: newweather });
+    this.setState({ ip, weather: newweather, isLoaded: true });
   }
 
   handleSubmit = async city => {
@@ -36,13 +37,15 @@ export default class Main extends React.Component {
   }
 
   render() {
-    const {weather, error} = this.state;
+    const {weather, error, isLoaded} = this.state;
     return (
+        isLoaded ?
       <div className="container">
         <WeatherList weather={weather} deleteCity={this.deleteCity} />
         <WeatherAdd onSubmit={this.handleSubmit} />
         {error && <div className="error">Вы ввели неверный город</div>}
       </div>
+      : <div className="loading"></div>
     );
   }
 }
