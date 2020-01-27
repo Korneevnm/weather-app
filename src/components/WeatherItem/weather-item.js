@@ -18,8 +18,8 @@ const WeatherItem = ({
       <div className='box'>
         <div className='img'>
           <img
-            src={`http://openweathermap.org/img/w/${weather[0].icon}.png`}
-            alt='weather-icon'
+            src={`https://openweathermap.org/img/w/${weather[0].icon}.png`}
+            alt={weather[0].main}
             title={weather[0].main}
           />
         </div>
