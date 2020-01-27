@@ -4,11 +4,15 @@
   "private": true,
   "homepage": "https://korneevnm.github.io/weather-app/",
   "dependencies": {
-    "classnames": "^2.2.6",
-    "gh-pages": "^2.0.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "antd": "^3.26.7",
+    "axios": "^0.18.1",
+    "gh-pages": "^2.2.0",
+    "rc-tween-one": "^2.6.8",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0",
+    "sass": "^1.25.0",
+    "transliteration": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",

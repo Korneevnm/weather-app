@@ -1,0 +1,43 @@
+.add
+  display: flex
+  align-items: center
+  width: 60px
+  height: 60px
+  border-radius: 100%
+  font-size: 60px
+  margin: 0 auto
+  cursor: pointer
+  outline: none
+  transition: box-shadow .2s, transform .1s
+  &:active
+    box-shadow: inset 1px 1px 5px 6px rgba(0,0,0,.7)
+    transform: translateY(2px)
+
+.form
+  position: relative
+  .ant-input
+    height: 50px !important
+    font-size: 18px !important
+  .ant-btn
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 0
+    height: 50px
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+  .ant-select-selection__placeholder, .ant-select-search__field__placeholder
+    height: 100%
+    font-size: 18px
+    margin-top: 0
+  .ant-input-affix-wrapper .ant-input-suffix
+    right: 0
+
+.ant-modal
+  padding: 0 !important
+
+.ant-modal-body
+  padding: 60px 25px 30px!important
+
+.ant-modal-footer
+  display: none
