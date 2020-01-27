@@ -17,14 +17,14 @@ const App = () => {
   const fetchData = async () => {
     setIsLoading(true);
     const ip = await axios
-      .get(`http://free.ipwhois.io/json/`)
+      .get(`https://ipapi.co/json/`)
       .then(response => response.data);
 
     await axios
       .get(`${url}?q=${ip.city}&units=metric&APPID=${appId}`)
       .then(response => setWeather([...weather, response.data]))
       .catch(error => {
-        if (error.response) {
+        if (error.response || ip.city === undefined) {
           setIsErrorIp(true);
         }
       });
